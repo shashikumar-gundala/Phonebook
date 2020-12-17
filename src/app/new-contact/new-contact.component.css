@@ -1,0 +1,44 @@
+div{
+    margin: auto;
+    width: 80%;
+}
+#addbtn{
+    background-color: rgb(6, 6, 240);
+    float: right;
+}
+#div1{
+background-color: rgb(205, 205, 218);
+height: 100px;
+}
+/*  */
+#cnt{
+   display: inline-block;
+   margin-right: 100px;
+   color: rgb(8, 6, 109);
+   font-style: oblique;
+   
+}
+#cntdet{
+margin: auto;
+}
+#search{
+    height: 100px;
+    width: 300px;
+}
+#person{
+    background-color: rgb(184, 229, 230);
+    border: 2px solid rgb(206, 52, 52);
+    height: 70px;
+    width: 50%;
+}
+#head{
+    display: inline-block;
+    margin-left: 400px;
+    top: 100px;
+}
+#addbtn{
+    background-color: green;
+    height: 40px;
+    width: 120px;
+    top: -20px\\;
+}

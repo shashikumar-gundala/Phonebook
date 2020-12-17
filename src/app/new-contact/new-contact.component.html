@@ -1,0 +1,55 @@
+<div>
+    <div id="div1">
+        <table >
+            <tr>
+                
+                <div id="cnt" > <h1>Contacts</h1></div>
+                <div id="head" ><button (click)="addContact()" id="addbtn" >AddContact</button></div>
+                
+            </tr>
+        </table>
+       
+    </div>
+    <div *ngIf="details" class="form-group">
+        <table id="cntdet">
+            <tr><input type="text" class="form-control" placeholder="Enter FirstName" [(ngModel)]="fname"></tr>
+            <tr><input type="text" class="form-control" placeholder="Enter lastName" [(ngModel)]="lname"></tr>
+            <tr> <input type="text" class="form-control" placeholder="Enter Mobile Number" [(ngModel)]="mobile"></tr>
+            <tr><button (click)="cretateNew()" class="btn btn-success">Create</button></tr>
+        </table>
+        
+        
+       
+    </div>
+    <div *ngIf="!details" id="search" class="form-group" >
+        <tr>
+            <td><input type="text" placeholder="Search  by last name" [(ngModel)]="searchName" class="form-control"/></td>
+            <td><button id="srch" (click)="Search()" class="btn btn-warning">Search</button></td>
+        </tr>
+        
+    </div>
+    <div *ngIf="found" class="card">
+        <table class="card-body">
+            <tr>
+                <td>Name</td>
+                <td>Lastname</td>
+                <td>Mobile</td>
+            </tr>
+            <tr>
+                <td>{{contactList[foundAt].firstname}}</td>
+                <td>{{contactList[foundAt].lastname}}</td>
+                <td>{{contactList[foundAt].phone}}</td>
+                <button (click)="Hidesearch()" class="btn btn-info"> Okay</button>
+            </tr>
+        </table>
+    </div>
+    <div *ngIf="create">
+        <ul >
+            <div *ngFor="let item of contactList" id="person" >
+                <span>{{item.firstname}}</span><br>
+                <span>{{item.lastname}}</span>
+                <button id="head" (click)="delete(item)" class="btn btn-danger">Delete </button>
+            </div>
+        </ul>
+    </div>
+</div>
